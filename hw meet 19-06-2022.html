@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        alert ('Добре дошли в C++олана маза - пълно с хубава зимнина! ');
+    
+        let name=prompt('Моля, въведете първото си име');
+        let surname=prompt('Моля, въведете фамилията си');
+        let age=prompt('Моля, въведете годините си');
+        let gender=prompt('Моля, въведете пола си');
+
+        let genderMan = gender =='мъж';
+        let genderWoman = gender=='жена';
+        let customerMajorAge = age>=18;
+        let customerMinorAge = age<18 ;
+
+        let manAbove18 = (genderMan) && (customerMajorAge);
+        let womanAbove18 = (genderWoman) && (customerMajorAge);
+        let childMan = (genderMan) && (customerMinorAge);
+        let childWoman = (genderWoman) && (customerMinorAge);
+        
+        
+        if (manAbove18) {
+            console.log (`Здравейте, господин ${surname}`);
+        }
+        else if (womanAbove18) {
+            console.log (`Здравейте, госпожо ${surname}`);
+        }
+        else if (childMan) {
+            console.log ('Здрасти, малкия, не пускаме дечица тука-бягай за бира');
+        }
+        else if (childWoman) {customerMinorAge
+            console.log ('Здрасти, малката, не пускаме дечица тука, отивай да си играеш');
+        }        
+        else {console.log ('невалидни данни');
+        }
+        
+        let idNumber = Math.floor(Math.random() * 100);
+        console.log (idNumber);
+
+        alert (`Добре дошъл в мазето на баба ${name} ${surname} 
+                Ти се идентифицира с номер ${idNumber} 
+                Ти си на ${age}`);
+        
+      let wine = "ябълково вино";
+      let meat = "пушено месо";
+      let marmalade = "мармалад";
+      let peppers = "мариновани чушки";
+      let piggyBank = "прасенце касичка";
+
+      let qualityWine = 10;
+      let qualityMeat = 5;
+      let qualityMarmalade = 9;
+      let qualityPeppers = 4;
+      let qualityPiggyBank = '184лв. и 35 стотинки';
+
+      let idWine = 'C_7544';
+      let idMeat = 'M_7411';
+      let idMarmalade = 'S_6491';
+      let idPeppers = 'P_7485';
+      let idPiggyBank = 'B_6584';
+
+      alert('Отчет за продуктите на баба');
+
+      let tblProducts =[[wine,qualityWine,idWine],
+      [meat,qualityMeat,idMeat],
+      [marmalade,qualityMarmalade,idMarmalade],
+      [peppers,qualityPeppers,idPeppers],
+      [piggyBank,qualityPiggyBank,idPiggyBank]];
+      console.table(tblProducts);
+    
+      let charity = prompt ('Желаете ли да дарите някаква сума?')
+      let charityYes = charity == 'да';
+      let charityNo = charity == 'не';
+      let charityOkMan = (manAbove18) && (charityYes);
+      let charityOkWoman = (womanAbove18) && (charityYes);
+      let charityCancelMan = (manAbove18) && (charityNo);
+      let charityCancelWoman = (womanAbove18) && (charityNo);
+
+      if (charityOkMan) {sumCharity = prompt ('Каква сума ще дарите?');
+      taxCharity = (sumCharity*1.2);
+      alert (`Вашето дарение е в размер на ${taxCharity}`);
+      }
+      else if (charityOkWoman) {let sumCharity = prompt ('Каква сума ще дарите?');
+      let taxCharity = (sumCharity*1.2);
+      alert (`Вашето дарение е в размер на ${taxCharity}`);
+      }
+      else if (charityCancelMan) {alert ('Трябва да бъдем добри, работете в тази посока!');
+      }
+      else if (charityCancelWoman) {alert ('Трябва да бъдем добри, работете в тази посока!');
+      }
+      else {'невалидни данни'
+    }
+      
+      
+     
+
+
+        
+    
+    
+    
+    </script>
+</body>
+</html>
